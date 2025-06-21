@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "MC-TR Rozet Eklentisi",
+  "version": "1.0",
+  "description": "MC-TR İçin Rozetlere Erişim! boran3q",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://mc-tr.com/*", "*://*.mc-tr.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
