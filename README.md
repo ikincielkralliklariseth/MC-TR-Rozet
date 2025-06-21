@@ -22,6 +22,8 @@ Kurulum Talimatları:
 Yükleme tamamlandıktan sonra uzantınız aktif olacaktır.
 mc-tr sitesine girerek sağ alt köşede beliren yuvarlak simgeye tıklayarak rozet menüsüne ulaşabilirsiniz.
 
+Not: JS Bilmediğimden Dolayı Yapay Zeka İle Destek Alarak Yaptım Buna Göre Yargılarsak Sevinirim!
+
 ![image](https://github.com/user-attachments/assets/72214b69-275c-4f42-a778-0741b6f48dea)
 ![image](https://github.com/user-attachments/assets/7d42b4fe-b838-40eb-a94f-edbd1897848f)
 ![image](https://github.com/user-attachments/assets/3529e056-199c-494f-8d3a-62ddac9040ab)
