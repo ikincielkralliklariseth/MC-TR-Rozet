@@ -16,7 +16,7 @@
 
   let customRozetler = [];
   try {
-    localStorage.setItem('mc-tr-custom-roles', '[]'); // localStorage'daki özel rolleri sıfırla
+    localStorage.setItem('mc-tr-custom-roles', '[]');
   } catch (e) {
     console.error('localStorage custom roles sıfırlama hatası:', e);
     alert("Özel roller sıfırlanamadı, tarayıcı depolama hatası!");
@@ -142,7 +142,7 @@
       const newRole = {
         name: name,
         id: id,
-        priority: -1, // Özel roller her zaman en altta
+        priority: -1,
         html: html.replace('message-userBanner', 'message-userBanner custom-badge').replace(/data-badge="[^"]*"/, `data-badge="${id}"`),
         isCustom: true
       };
@@ -458,12 +458,9 @@
       .map(badgeId => rozetler.find(r => r.id === badgeId))
       .filter(badge => badge)
       .sort((a, b) => {
-        // Varsayılan rozetler önce, özel rozetler sonra
         if (!a.isCustom && b.isCustom) return -1;
         if (a.isCustom && !b.isCustom) return 1;
-        // Varsayılan rozetler kendi içinde önceliğe göre (15 > 2)
-        // Özel rozetler eklenme sırasına göre (priority hep -1)
-        return b.priority - a.priority; // Yüksek öncelik üstte
+        return b.priority - a.priority;
       });
   }
 
@@ -587,12 +584,9 @@
       badgeOptionsDiv.innerHTML = '';
       
       const sortedRozetler = [...rozetler].sort((a, b) => {
-        // Varsayılan rozetler önce, özel rozetler sonra
         if (!a.isCustom && b.isCustom) return -1;
         if (a.isCustom && !b.isCustom) return 1;
-        // Varsayılan rozetler kendi içinde önceliğe göre (15 > 2)
-        // Özel rozetler eklenme sırasına göre (priority hep -1)
-        return b.priority - a.priority; // Yüksek öncelik üstte
+        return b.priority - a.priority;
       });
       
       sortedRozetler.forEach(r => {
